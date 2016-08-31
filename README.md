@@ -19,7 +19,7 @@ This requires an object called `StoreError` to be registered to the Dependency I
 or use the [Steeplejack Errors](https://www.npmjs.com/package/steeplejack-errors) package
 
 
-[node-version-image]: https://img.shields.io/badge/node.js-%3E%3D_0.10-brightgreen.svg?style=flat
+[node-version-image]: https://img.shields.io/badge/node.js-%3E%3D_0.12-brightgreen.svg?style=flat
 [travis-image]: https://img.shields.io/travis/riggerthegeek/steeplejack-http.svg?style=flat
 [dependencies-image]: http://img.shields.io/david/riggerthegeek/steeplejack-http.svg?style=flat
 [dev-dependencies-image]: http://img.shields.io/david/dev/riggerthegeek/steeplejack-http.svg?style=flat
