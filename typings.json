@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "es6-promise": "registry:npm/es6-promise#3.0.0+20160723033700"
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160723033700",
+    "lodash": "registry:npm/lodash#4.0.0+20160723033700"
   },
   "devDependencies": {
     "proxyquire": "registry:npm/proxyquire#1.0.0+20160723033700"

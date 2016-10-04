@@ -10,6 +10,7 @@ import {EventEmitter} from "events";
 
 
 /* Third-party modules */
+import * as _ from "lodash";
 import {Inject} from "steeplejack/decorators/inject";
 import {Promise} from "es6-promise";
 const request = require("request-promise-native");
@@ -71,18 +72,16 @@ export class HTTP extends EventEmitter {
         opts : any = {}
     ) : Promise<any> {
 
-        const { gzip = true, json = true } = opts;
-
-        const httpOpts = {
+        const httpOpts = _.defaults(opts, {
             baseUrl: this.baseUrl,
             body,
-            gzip,
+            gzip: true,
             headers,
-            json,
+            json: true,
             method,
-            resolveWithFullResponse: opts.full || false,
+            resolveWithFullResponse: false,
             url
-        };
+        });
 
         /* Emit the call to the logger */
         this.emit("log", "debug", "New HTTP request", httpOpts);

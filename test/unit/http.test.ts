@@ -97,6 +97,8 @@ describe("HTTP test", function () {
 
                 this.request.resolves("result2");
 
+                const transform = () => {};
+
                 const opts = {
                     baseUrl: "a base URL",
                     body: "the body",
@@ -105,15 +107,19 @@ describe("HTTP test", function () {
                     json: false,
                     method: "method2",
                     resolveWithFullResponse: true,
-                    url: "a URL"
+                    simple: false,
+                    url: "a URL",
+                    transform
                 };
 
                 this.obj.baseUrl = "a base URL";
 
                 return (<any> this.obj)._callUrl("method2", "a URL", "some headers", "the body", {
-                    full: true,
+                    resolveWithFullResponse: true,
                     gzip: false,
-                    json: false
+                    json: false,
+                    simple: false,
+                    transform
                 })
                     .then((result: any) => {
 
