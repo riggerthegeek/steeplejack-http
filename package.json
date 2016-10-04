@@ -1,6 +1,6 @@
 {
   "name": "steeplejack-http",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Allows Steeplejack projects to make HTTP calls to other servers",
   "main": "./index",
   "scripts": {
